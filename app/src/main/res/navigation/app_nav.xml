@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.musicplayer.mobdev20.presentation.ui.screen.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash" >
+        <action
+            android:id="@+id/action_splashScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+        <action
+            android:id="@+id/action_splashScreen_to_musicPlayerScreen"
+            app:destination="@id/musicPlayerScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.gita.musicplayer.mobdev20.presentation.ui.screen.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home" />
+    <fragment
+        android:id="@+id/musicPlayerScreen"
+        android:name="uz.gita.musicplayer.mobdev20.presentation.ui.screen.MusicPlayerScreen"
+        android:label="screen_musicplayer"
+        tools:layout="@layout/screen_musicplayer" />
+</navigation>
