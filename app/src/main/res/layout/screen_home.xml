@@ -8,6 +8,7 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
         android:elevation="10dp"
         android:id="@+id/appCompatImageView4"
         style="@style/search_style"
@@ -23,6 +24,7 @@
         android:foregroundGravity="top"
         android:id="@+id/appCompatImageView"
         style="@style/search_style"
+        app:tint="@color/white"
         android:src="@drawable/ic_music_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -66,6 +68,7 @@
             style="@style/music_title_style"
             android:ellipsize="end"
             android:maxLines="1"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/artis"
             app:layout_constraintEnd_toStartOf="@+id/prev"
             app:layout_constraintStart_toEndOf="@+id/musicPlayImage"
@@ -77,6 +80,7 @@
             android:id="@+id/prev"
             style="@style/music_prev_style"
             android:src="@drawable/ic_skip_start"
+            app:tint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/play"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -88,6 +92,7 @@
             android:background="@drawable/ic_search_style"
             android:padding="12dp"
             android:id="@+id/play"
+            app:tint="@color/white"
             style="@style/music_play_style"
             android:src="@drawable/ic_play"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -97,6 +102,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/next"
+            app:tint="@color/white"
             android:src="@drawable/ic_skip_end"
             style="@style/music_next_style"
             android:layout_marginEnd="10dp"
@@ -109,6 +115,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:id="@+id/artis"
+            android:textColor="@color/white"
             style="@style/music_name_style"
             app:layout_constraintBottom_toBottomOf="@+id/musicPlayImage"
             app:layout_constraintEnd_toEndOf="@+id/musicPlayTittle"
