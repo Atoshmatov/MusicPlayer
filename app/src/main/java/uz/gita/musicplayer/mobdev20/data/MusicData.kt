@@ -5,5 +5,5 @@ data class MusicData(
     val artist: String,
     val tittle: String,
     val data: String,
-    val duration: String
+    val duration: Long,
 )

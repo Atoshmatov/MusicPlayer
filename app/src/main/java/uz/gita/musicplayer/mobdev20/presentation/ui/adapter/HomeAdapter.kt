@@ -1,34 +1,47 @@
 package uz.gita.musicplayer.mobdev20.presentation.ui.adapter
 
-import android.view.View
+import android.database.Cursor
+import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import uz.gita.musicplayer.mobdev20.data.MusicData
+import uz.gita.musicplayer.mobdev20.databinding.ItemMusicBinding
+import uz.gita.musicplayer.mobdev20.utils.getMusicDataByPosition
 
-class HomeAdapter : ListAdapter<MusicData, HomeAdapter.ViewHolder>(MusicDataDiffUtils) {
+class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+    var cursor: Cursor? = null
+    private var selectedMusicByPositionListener: ((Int) -> Unit)? = null
 
-    object MusicDataDiffUtils : DiffUtil.ItemCallback<MusicData>() {
-        override fun areItemsTheSame(oldItem: MusicData, newItem: MusicData): Boolean {
-            TODO("Not yet implemented")
+    inner class ViewHolder(private val binding: ItemMusicBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.root.setOnClickListener {
+                selectedMusicByPositionListener?.invoke(absoluteAdapterPosition)
+            }
         }
 
-        override fun areContentsTheSame(oldItem: MusicData, newItem: MusicData): Boolean {
-            TODO("Not yet implemented")
+        fun bind() {
+            cursor?.getMusicDataByPosition(absoluteAdapterPosition)?.let {
+                binding.musicTittle.text = it.tittle
+                binding.musicArtis.text = it.artist
+            }
         }
-
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
+        ItemMusicBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+    )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind()
+    }
+
+    override fun getItemCount(): Int = cursor?.count ?: 0
+
+    fun setSelectedMusicByPositionListener(block: (Int) -> Unit) {
+        selectedMusicByPositionListener = block
     }
 }

@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_arrow_left.xml" value="0.186" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_cancel.xml" value="0.1865" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_chevron_up.xml" value="0.218" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_component.xml" value="0.218" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_menu_burger.xml" value="0.228" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_music_next.xml" value="0.186" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_music_note_beamed.xml" value="0.218" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_music_paly.xml" value="0.248" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_music_paly_style.xml" value="0.248" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_music_play.xml" value="0.186" />
@@ -13,14 +17,21 @@
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_music_search.xml" value="0.186" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_next.xml" value="0.186" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_paly_music.xml" value="0.186" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_pause.xml" value="0.1945" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_play.xml" value="0.1835" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_rectangle_4.xml" value="0.186" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_search.xml" value="0.186" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_search_style.xml" value="0.186" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_skip_end.xml" value="0.1835" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/ic_skip_start.xml" value="0.1835" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/music_player_image_style.xml" value="0.1865" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/music_player_style.xml" value="0.247" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/music_player_style2.xml" value="0.218" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/drawable/play_music.xml" value="0.247" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/layout/item_image.xml" value="0.24114583333333334" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/layout/item_music.xml" value="0.264" />
+        <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/layout/remote_view.xml" value="0.2421875" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/layout/screen_home.xml" value="0.2421875" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/layout/screen_musicplayer.xml" value="0.2421875" />
         <entry key="..\:/Play_Market/newPlayMerket/musicPlayer/app/src/main/res/layout/screen_splash.xml" value="0.2421875" />

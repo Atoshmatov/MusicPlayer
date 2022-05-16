@@ -14,8 +14,7 @@
     <style name="music_image_style">
         <item name="android:layout_width">60dp</item>
         <item name="android:layout_height">60dp</item>
-        <item name="android:layout_marginStart">10dp</item>
-        <item name="android:background">@drawable/ic_music_play_style</item>
+        <item name="android:background">@drawable/play2</item>
     </style>
 
     <style name="music_title_style">
@@ -31,15 +30,12 @@
     <style name="music_prev_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">20dp</item>
-        <item name="android:layout_marginEnd">20dp</item>
         <item name="android:padding">10dp</item>
     </style>
 
     <style name="music_play_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginEnd">20dp</item>
         <item name="android:padding">10dp</item>
     </style>
 

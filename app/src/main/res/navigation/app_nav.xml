@@ -12,16 +12,19 @@
         tools:layout="@layout/screen_splash" >
         <action
             android:id="@+id/action_splashScreen_to_homeScreen"
-            app:destination="@id/homeScreen" />
-        <action
-            android:id="@+id/action_splashScreen_to_musicPlayerScreen"
-            app:destination="@id/musicPlayerScreen" />
+            app:destination="@id/homeScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/homeScreen"
         android:name="uz.gita.musicplayer.mobdev20.presentation.ui.screen.HomeScreen"
         android:label="screen_home"
-        tools:layout="@layout/screen_home" />
+        tools:layout="@layout/screen_home" >
+        <action
+            android:id="@+id/action_homeScreen_to_musicPlayerScreen"
+            app:destination="@id/musicPlayerScreen" />
+    </fragment>
     <fragment
         android:id="@+id/musicPlayerScreen"
         android:name="uz.gita.musicplayer.mobdev20.presentation.ui.screen.MusicPlayerScreen"

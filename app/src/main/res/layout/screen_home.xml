@@ -8,8 +8,10 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:elevation="10dp"
         android:id="@+id/appCompatImageView4"
         style="@style/search_style"
+        android:foregroundGravity="top"
         android:src="@drawable/ic_menu_burger"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,6 +19,8 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:elevation="10dp"
+        android:foregroundGravity="top"
         android:id="@+id/appCompatImageView"
         style="@style/search_style"
         android:src="@drawable/ic_music_search"
@@ -28,18 +32,17 @@
         android:id="@+id/recyclerView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_music" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="80dp"
         android:background="@drawable/music_player_style"
         android:foregroundGravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,13 +53,19 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/musicPlayImage"
             style="@style/music_image_style"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:layout_marginStart="10dp"
             android:id="@+id/musicPlayTittle"
             style="@style/music_title_style"
+            android:ellipsize="end"
+            android:maxLines="1"
             app:layout_constraintBottom_toTopOf="@id/artis"
             app:layout_constraintEnd_toStartOf="@+id/prev"
             app:layout_constraintStart_toEndOf="@+id/musicPlayImage"
@@ -64,19 +73,23 @@
             tools:text="dsadsadsadsadsafdsafdsa" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginStart="10dp"
             android:id="@+id/prev"
             style="@style/music_prev_style"
-            android:src="@drawable/ic_music_prev"
+            android:src="@drawable/ic_skip_start"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/musicPlayMusic"
+            app:layout_constraintEnd_toStartOf="@+id/play"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toEndOf="@+id/musicPlayTittle"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/musicPlayMusic"
+            android:background="@drawable/ic_search_style"
+            android:padding="12dp"
+            android:id="@+id/play"
             style="@style/music_play_style"
-            android:src="@drawable/ic_music_play"
+            android:src="@drawable/ic_play"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/next"
             app:layout_constraintStart_toEndOf="@id/prev"
@@ -84,14 +97,17 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/next"
+            android:src="@drawable/ic_skip_end"
             style="@style/music_next_style"
-            android:src="@drawable/ic_music_next"
+            android:layout_marginEnd="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/musicPlayMusic"
+            app:layout_constraintStart_toEndOf="@+id/play"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:ellipsize="end"
+            android:maxLines="1"
             android:id="@+id/artis"
             style="@style/music_name_style"
             app:layout_constraintBottom_toBottomOf="@+id/musicPlayImage"
