@@ -36,12 +36,11 @@ class MusicService : Service() {
     private val mediaPlayer get() = _mediaPlayer!!
     private val scope = CoroutineScope(Dispatchers.IO + Job())
     private var job: Job? = null
-    private val receiver = BroadcastReceiver()
     private var prevClick = false
     private var nextClick = false
-
     @Inject
     lateinit var mySharedPreferences: MySharedPreferences
+    private val receiver = BroadcastReceiver()
 
 
     override fun onCreate() {

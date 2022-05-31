@@ -25,7 +25,12 @@ class SplashScreen : Fragment(R.layout.screen_splash) {
             requireActivity().window.navigationBarColor =
                 ContextCompat.getColor(requireContext(), R.color.purple_200)
         }
-        requireActivity().checkPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE)) {
+        requireActivity().checkPermissions(
+            arrayOf(
+                android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                android.Manifest.permission.READ_PHONE_STATE
+            )
+        ) {
             requireContext().getMusicCursor().onEach {
                 MyAppManager.noLiveData.value = it.count > 0
                 MyAppManager.cursor = it
