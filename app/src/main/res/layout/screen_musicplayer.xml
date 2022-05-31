@@ -4,82 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#010101"
     tools:context=".presentation.ui.screen.MusicPlayerScreen">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView2"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/ic_search_style"
         android:clickable="true"
+        app:tint="@color/white"
         android:elevation="4dp"
         android:focusable="true"
         android:padding="8dp"
-        app:tint="@color/white"
         android:src="@drawable/ic_arrow_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
         android:fontFamily="@font/athiti"
-        android:textColor="#272626"
+        android:text="@string/song"
+        android:textColor="@color/white"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
-        tools:text="Now Playing" />
+        app:layout_constraintTop_toTopOf="@+id/back" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView5"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/ic_search_style"
-        android:clickable="true"
-        android:elevation="10dp"
-        android:focusable="true"
-        android:padding="12dp"
-        android:src="@drawable/ic_arrow_left"
-        android:visibility="gone"
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="355dp"
+        android:layout_height="355dp"
+        android:layout_margin="30dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#fff"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="#FAFAFA">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/vinyl"
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="250dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/athiti"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:text="@string/unknown"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/athiti"
+        android:maxLines="1"
+        android:text="@string/unknown"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2"
-        app:layout_constraintVertical_bias="0.5"
-        app:tint="#EFB29B" />
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/tittle" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:progressTint="#EFB29B"
+        android:elevation="10dp"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/playMusic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintVertical_bias="0.88" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView3"
@@ -103,7 +133,9 @@
         tools:text="12:12" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:padding="20dp"
         android:id="@+id/prevMusic"
+        app:tint="@color/white"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:src="@drawable/ic_skip_start" />
@@ -118,11 +150,12 @@
         android:elevation="2dp"
         android:focusable="true"
         android:padding="12dp"
-        app:tint="@color/white"
         android:src="@drawable/ic_play"
         tools:layout_editor_absoluteX="156dp" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:padding="20dp"
+        app:tint="@color/white"
         android:id="@+id/nextMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -134,7 +167,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/flow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar"
@@ -145,6 +178,7 @@
         android:id="@+id/flow"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:padding="20dp"
         app:constraint_referenced_ids="prevMusic,playMusic,nextMusic"
         app:flow_horizontalBias="0"
         app:flow_verticalBias="0"

@@ -3,22 +3,20 @@ package uz.gita.musicplayer.mobdev20.utils
 import android.widget.SeekBar
 
 
-fun SeekBar.setChangeProgress(block: (Int) -> Unit) {
+fun SeekBar.setChangeProgress(block: (Boolean) -> Unit) {
     this.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-        override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+        override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+            if (fromUser) {
+                block(false)
+            } else block(true)
+        }
+
+        override fun onStartTrackingTouch(seekBar: SeekBar?) {
 
         }
 
-        override fun onStartTrackingTouch(p0: SeekBar?) {
-            p0?.let {
-                block.invoke(it.progress)
-            }
-        }
-
-        override fun onStopTrackingTouch(p0: SeekBar?) {
-            p0?.let {
-                block.invoke(it.progress)
-            }
+        override fun onStopTrackingTouch(seekBar: SeekBar?) {
+            block(false)
         }
     })
 }

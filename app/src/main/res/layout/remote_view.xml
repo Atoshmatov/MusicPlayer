@@ -47,7 +47,6 @@
             android:src="@drawable/ic_skip_start" />
 
         <ImageView
-            android:tint="@color/white"
             android:id="@+id/buttonManage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -5,8 +5,8 @@
     android:layout_height="70dp"
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp"
-    android:backgroundTint="#F5F1FF"
-    app:cardCornerRadius="4dp"
+    android:backgroundTint="#131313"
+    app:cardCornerRadius="5dp"
     app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +24,7 @@
             android:textStyle="bold"
             android:ellipsize="end"
             android:maxLines="1"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/musicArtis"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
@@ -32,32 +33,45 @@
             app:layout_constraintVertical_chainStyle="packed"
             tools:text="Holimizni ko'rsalar edi" />
 
-        <androidx.appcompat.widget.AppCompatImageView
+
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/musicImage"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:adjustViewBounds="true"
-            android:background="@drawable/image1"
+            android:layout_margin="10dp"
+            android:backgroundTint="#fff"
+            app:cardCornerRadius="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FAFAFA">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/musicArtis"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:fontFamily="@font/athiti"
-            android:textSize="16sp"
             android:ellipsize="end"
+            android:fontFamily="@font/athiti"
             android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/musicImage"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/musicTittle"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@+id/musicImage"
             app:layout_constraintTop_toBottomOf="@+id/musicTittle"
             tools:text="Alimardon" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

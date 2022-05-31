@@ -4,10 +4,16 @@ import android.database.Cursor
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import uz.gita.musicplayer.mobdev20.databinding.ItemMusicBinding
 import uz.gita.musicplayer.mobdev20.utils.getMusicDataByPosition
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class HomeAdapter(private val scope: CoroutineScope) :
+    RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+    private var clicker = false
     var cursor: Cursor? = null
     private var selectedMusicByPositionListener: ((Int) -> Unit)? = null
 
@@ -15,7 +21,15 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
         init {
             binding.root.setOnClickListener {
-                selectedMusicByPositionListener?.invoke(absoluteAdapterPosition)
+                if (!clicker) {
+                    clicker = true
+                    selectedMusicByPositionListener?.invoke(absoluteAdapterPosition)
+                    scope.launch {
+                        delay(400)
+                        clicker = false
+                        cancel()
+                    }
+                }
             }
         }
 
