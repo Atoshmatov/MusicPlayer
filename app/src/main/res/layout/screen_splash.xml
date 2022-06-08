@@ -24,11 +24,11 @@
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
+        android:id="@+id/textVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/athiti"
-        android:text="@string/music_player"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

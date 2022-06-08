@@ -2,5 +2,6 @@
     <string name="app_name">Music Player</string>
     <string name="unknown">unknown</string>
     <string name="song">Song</string>
-    <string name="music_player">Music Player</string>
+    <string name="music_player">Music Player v.%1$s</string>
+    <string name="text_splash_music">Music Player v.%1$s</string>
 </resources>
